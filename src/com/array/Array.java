@@ -1,5 +1,4 @@
 package com.array;
-import java.util.*;
 
 @SuppressWarnings("unchecked")
 public class Array <T> implements Iterable <T>{
