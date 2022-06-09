@@ -1,7 +1,5 @@
 package doublyLinkedList;
 
-import java.util.Iterator;
-
 public class DoublyLinkedList <T> implements Iterable<T>{
 
     private int size = 0;
