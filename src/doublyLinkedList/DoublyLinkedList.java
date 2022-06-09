@@ -220,7 +220,30 @@ public class DoublyLinkedList <T> implements Iterable<T>{
     }
 
     @Override
-    public Iterator<T> iterator() {
-        return null;
+    public java.util.Iterator<T> iterator(){
+        return new java.util.Iterator<T>(){
+            private Node<T> trav = head;
+            @Override
+            public boolean hasNext(){
+                return trav != null;
+            }
+            @Override
+            public T next(){
+                T data = trav.data;
+                trav = trav.next;
+                return data;
+            }
+        };
+    }
+    @Override public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        Node <T> trav = head;
+        while (trav!=null){
+            sb.append(trav.data).append(", ");
+            trav = trav.next;
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }
