@@ -7,7 +7,7 @@ public class PQueue <T extends Comparable <T>>{
     // the number of elements currently inside the heap
     private int heapSize = 0;
 
-    // the internal capacity of the heap
+    // the internal capacity of the hip
     private int heapCapacity = 0;
 
     // a dynamic list to track the elements inside the heap
